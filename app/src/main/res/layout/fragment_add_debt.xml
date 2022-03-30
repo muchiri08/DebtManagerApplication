@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddDebtFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldFName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="First Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfFN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldLName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="Last Name"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldFName"
+        app:layout_constraintStart_toStartOf="@+id/textFieldFName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFName"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfLN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="Phone Number"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldLName"
+        app:layout_constraintStart_toStartOf="@+id/textFieldLName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldLName"
+        app:startIconDrawable="@drawable/ic_baseline_contact_phone_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfPN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="Amount"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldPhone"
+        app:layout_constraintStart_toStartOf="@+id/textFieldPhone"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldPhone"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldGivenDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="Date Given"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldAmount"
+        app:layout_constraintStart_toStartOf="@+id/textFieldAmount"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldAmount"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfDG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldDeadlineDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="Deadline Date"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldGivenDate"
+        app:layout_constraintStart_toStartOf="@+id/textFieldGivenDate"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldGivenDate"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfDD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:text="Clear"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSubmit"
+        app:layout_constraintStart_toStartOf="@+id/textFieldDeadlineDate"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldDeadlineDate" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="Submit"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonClear"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldDeadlineDate"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintTop_toTopOf="@+id/buttonClear"/>
+
+    <TextView
+        android:id="@+id/textViewWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill all Fields"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textFieldFName"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldFName"
+        app:layout_constraintStart_toStartOf="@+id/textFieldFName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
